@@ -4,7 +4,7 @@ Module for dependency injection.
 
 # Imports from standard library
 import os
-from typing import List, TYPE_CHECKING
+from typing import TYPE_CHECKING, List
 
 # Imports from third party libraries
 from dependency_injector import containers, providers
@@ -54,7 +54,7 @@ def _init_logger(configuration: providers.Configuration) -> providers.Singleton:
     """
 
     # Imports from logger core service package
-    from app.core.base.logger import get_logger, LogConfig
+    from app.core.base.logger import LogConfig, get_logger
 
     # Register logger provider
     logger_configuration = providers.Factory(
